@@ -24,8 +24,8 @@ def respond():
  #  text = update.message.text.encode('utf-8').decode()
    # for debugging purposes only
   ## print("got text message :", text)
-   print(telegram.InlineQuery.from_user)
-   location=telegram.InlineQuery.Location
+
+   location=telegram.Update.inline_query
    print(location)
    # the first time you chat with the bot AKA the welcoming message
    if text == "/start":
