@@ -2,7 +2,7 @@ import re
 from flask import Flask, request
 import telegram
 from telebot.credentials import bot_token, bot_user_name,URL
-
+from telegram import InlineQuery
 
 global bot
 global TOKEN
@@ -23,6 +23,8 @@ def respond():
    text = update.message.text.encode('utf-8').decode()
    # for debugging purposes only
    print("got text message :", text)
+   location=InlineQuery.location
+   print(location)
    # the first time you chat with the bot AKA the welcoming message
    if text == "/start":
        # print the welcoming message
